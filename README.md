@@ -46,7 +46,7 @@ ___
 
 ### Q: Are there any additional protocol roles? If yes, please explain in detail:
 Yes, Tokemak V2 has a central access controller with specified roles. The roles are listed here:
-https://github.com/Tokemak/v2-core/blob/62445b8ee3365611534c96aef189642b721693bf/src/libs/Roles.sol
+https://github.com/sherlock-audit/2023-06-tokemak/blob/83fb3c668c2f6caeb5d3e421cf9ad4a41e0a1c98/v2-core-audit-2023-07-14/src/libs/Roles.sol
 ___
 
 ### Q: Is the code/contract expected to comply with any EIPs? Are there specific assumptions around adhering to those EIPs that Watsons should be aware of?
@@ -67,7 +67,7 @@ Yes, there are several off-chain mechanisms
 1. LMPVault
     1. updateDebtReporting - initiated externally, but unprivileged operation
     2. rebalance/flashRebalance - initiated externally and is restricted to an allow list, but LMPStrategy’s fully validate the proposed actions.
-2. Stats - all stats contracts must have snapshots initiated by a keeper network at on-chain enforced intervals. With the exception of `IncentivePricingStats` these can be done in an unprivileged manner. `IncentivePricingStats` requires that snapshots are taken at randomized intervals, so is done by a privileged operator. More details can be found in [Stats High Level Docs](https://github.com/Tokemak/v2-core/blob/main/src/stats/Stats.md) and [Calculator Docs](https://github.com/Tokemak/v2-core/blob/main/src/stats/calculators/Calculators.md). [TODO: update links to hash]
+2. Stats - all stats contracts must have snapshots initiated by a keeper network at on-chain enforced intervals. With the exception of `IncentivePricingStats` these can be done in an unprivileged manner. `IncentivePricingStats` requires that snapshots are taken at randomized intervals, so is done by a privileged operator. More details can be found in [Stats High Level Docs](https://github.com/sherlock-audit/2023-06-tokemak/blob/83fb3c668c2f6caeb5d3e421cf9ad4a41e0a1c98/v2-core-audit-2023-07-14/src/stats/Stats.md) and [Calculator Docs](https://github.com/sherlock-audit/2023-06-tokemak/blob/83fb3c668c2f6caeb5d3e421cf9ad4a41e0a1c98/v2-core-audit-2023-07-14/src/stats/calculators/Calculators.md).
 3. src/beacon/FrxBeaconChainBacking - Will be written to by a protected off-chain component
 4. src/liquidation/LiquidationRow - claimVaultRewards() and liquidateVaultsForTokens() will be initiated by protected off-chain components.
 ___
