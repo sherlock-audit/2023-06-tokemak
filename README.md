@@ -54,7 +54,8 @@ src/vault/LMPVault.sol should be 4626 compatible
 ___
 
 ### Q: Please list any known issues/acceptable risks that should not result in a valid finding.
-Off-chain mechanisms listed in subsequent section are expected to be online and execute within their expected frequency
+- Off-chain mechanisms listed in subsequent section are expected to be online and execute within their expected frequency
+- The LMPStrategy.verifyRebalance() referenced in the LMPVault, and in the LMPDebt lib used by the vault, is expected to only return true when the rebalance is favorable for the vault/users.
 ___
 
 ### Q: Please provide links to previous audits (if any).
@@ -82,9 +83,6 @@ ___
 
 ### Q: Add links to relevant protocol resources
 README’s in the repo should provide further context.
-
-Commit and exclude contracts:
-https://tokemak.notion.site/Autopilot-Audit-99f03de2f31f4f52a0e3a11a616ae7ef?pvs=4
 ___
 
 
