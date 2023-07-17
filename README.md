@@ -51,7 +51,7 @@ Balancer rETH/WETH: 0x1E19CF2D73a72Ef1332C882F20534B6519Be0276
 Maverick Pools
 Maverick ETH/swETH boosted: 0xF917FE742C530Bd66BcEbf64B42c777B13aac92c
 
-Note: for LP positions that are staked at Convex/Aura there is an associated Convex/Aura ERC20 token that wraps the Curve LP token and is staked. If Tokemak stakes at Convex/Aura, we do not directly hold the ERC20, but rather wrap and stake in a single function.
+Note: for LP positions that are staked at Convex/Aura there is an associated Convex/Aura ERC20 token that wraps the Curve LP token and is staked. If Tokemak stakes at Convex/Aura, we do not directly hold the ERC20, but rather wrap and stake in a single function. 
 ___
 
 ### Q: Which ERC721 tokens do you expect will interact with the smart contracts? 
